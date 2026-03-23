@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Flask Landing{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1 class="display-4 mb-4">Welcome to Flask Landing</h1>
+        <p class="lead">A simple landing page built with Flask and Bootstrap 5</p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Flask Framework</h5>
+                <p class="card-text">Flask is a lightweight WSGI web application framework in Python. It's designed to make getting started quick and easy, with the ability to scale up to complex applications.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Bootstrap 5</h5>
+                <p class="card-text">Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">SQLAlchemy ORM</h5>
+                <p class="card-text">SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if not current_user.is_authenticated %}
+<div class="row mt-5 text-center">
+    <div class="col-md-12">
+        <p class="lead">Get started by logging in to your account</p>
+        <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">Login</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

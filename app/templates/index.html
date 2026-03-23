@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h2>Welcome to Flask App</h2>
+        <p class="lead">This is the homepage of our Flask application with Bootstrap 5.</p>
+        <div class="card my-4">
+            <div class="card-body">
+                <h5 class="card-title">Getting Started</h5>
+                <p class="card-text">This template is using Bootstrap 5 for styling and includes a responsive layout.</p>
+                <a href="{{ url_for('main.about') }}" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
