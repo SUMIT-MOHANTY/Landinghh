@@ -1,0 +1,61 @@
+/* Custom styles for Flask Landing Project */
+
+/* Add some padding to the body to prevent content from being hidden by fixed navbar */
+body {
+    padding-top: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the footer stick to the bottom */
+.footer {
+    margin-top: auto;
+}
+
+/* Custom card styling */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Custom button styling */
+.btn-primary {
+    background-color: #4a6fdc;
+    border-color: #4a6fdc;
+}
+
+.btn-primary:hover {
+    background-color: #3a5bbe;
+    border-color: #3a5bbe;
+}
+
+/* Custom form styling */
+.form-control:focus {
+    border-color: #4a6fdc;
+    box-shadow: 0 0 0 0.25rem rgba(74, 111, 220, 0.25);
+}
+
+/* Custom alert styling */
+.alert-success {
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    color: #0f5132;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    color: #842029;
+}
+
+.alert-info {
+    background-color: #cff4fc;
+    border-color: #b6effb;
+    color: #055160;
+}
