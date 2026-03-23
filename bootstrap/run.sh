@@ -1,1 +1,4 @@
-uvicorn src.main:app --reload --host 0.0.0.0 --port 8080
+set -e
+cd "$(dirname "$0")"
+export PYTHONPATH="${PYTHONPATH}:./"
+python3 src/main.py "$@"

@@ -1,27 +1,18 @@
-from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
+import os
+import sys
 
-app = FastAPI(
-    title="Bootstrap API",
-    version="1.0.0",
-    description="Minimal runnable FastAPI bootstrap project"
-)
+# Add bootstrap directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Optional 404 handler for unknown routes
-@app.exception_handler(404)
-async def custom_404_handler(request: Request, exc):
-    return JSONResponse(
-        status_code=404,
-        content={
-            "error": "Not Found",
-            "message": f"The requested URL {request.url.path} was not found on this server."
-        }
-    )
+from app import create_app
 
-@app.get("/")
-async def read_root():
-    return {"message": "Hello, World!"}
+# Create app using factory pattern
+app = create_app()
 
-@app.get("/health")
-async def health_check():
-    return {"status": "healthy"}
+if __name__ == '__main__':
+    # Get configuration from environment
+    port = int(os.environ.get('PORT', 8000))
+    debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+
+    # Run the application
+    app.run(host='0.0.0.0', port=port, debug=debug)

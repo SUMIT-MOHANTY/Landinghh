@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Home - Flask App{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-primary mb-3">
+                <i class="bi bi-cup-hot me-3"></i>Welcome to Flask App
+            </h1>
+            <p class="lead text-muted">
+                A modern, Bootstrap 5 powered Flask application with responsive design.
+            </p>
+        </div>
+
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Available Endpoints</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1">Root API</h6>
+                            <small class="text-muted">GET</small>
+                        </div>
+                        <p class="mb-1"><code>/</code> - Returns app status</p>
+                        <a href="/" class="btn btn-sm btn-outline-primary" target="_blank">Test</a>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h6 class="mb-1">Health Check</h6>
+                            <small class="text-muted">GET</small>
+                        </div>
+                        <p class="mb-1"><code>/health</code> - Service health status</p>
+                        <a href="/health" class="btn btn-sm btn-outline-success" target="_blank">Test</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
