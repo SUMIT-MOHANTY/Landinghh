@@ -1,10 +1,10 @@
 {
-  "name": "logout-endpoint-app",
+  "name": "ux-modeling-service",
   "version": "1.0.0",
-  "description": "Adding logout endpoint and conditional navigation",
+  "description": "UX Modeling Service landing page",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "python web/app.py",
     "dev": "nodemon server.js"
   },
   "dependencies": {
