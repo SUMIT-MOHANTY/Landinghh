@@ -1,0 +1,8 @@
+{
+  "name": "ux-modeling-service",
+  "version": "1.0.0",
+  "description": "UX Modeling Service landing page",
+  "scripts": {
+    "start": "python web/app.py"
+  }
+}
